@@ -1,91 +1,31 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "Comic Sans MS", sans-serif;
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-main {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    background: url("../img/bambuk_bg.jpg") center no-repeat;
-    background-size: 100% 100%;
+#playerField, #enemyField {
+    display: grid;
+    grid-template-columns: repeat(10, 35px);
+    grid-template-rows: repeat(10, 35px);
+    gap: 7px;
 }
 
-.panel {
-    width: 100%;
-    height: 100%;
+.cell {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    cursor: pointer;
 }
 
-.left {
-    width: 40%;
-    height: 100%;
+.cell:hover {
+    background-color: #aaa;
 }
 
-.main {
-    background: #ffe8ba;
-    padding: 5vh;
-    border: 3px solid #000;
-    border-radius: 2em;
+.hit {
+    background-color: red;
 }
 
-.changeName {
-    height: 15vh;
+.miss {
+    background-color: blue;
 }
-
-#game {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-}
-
-.info {
-    position: fixed;
-    width: 100%;
-    height: 8vh;
-    z-index: 100;
-    font-size: 1.3em;
-    background: rgba(255, 255, 255, .9);
-}
-
-.elements {
-    width: 100%;
-    height: 100%;
-}
-
-.element {
-    position: absolute;
-}
-
-.player {
-    background: url("../img/player.png") center no-repeat;
-    background-size: contain;
-}
-
-.apple {
-    background: url("../img/apple.png") center no-repeat;
-    background-size: contain;
-    animation: rotate infinite .6s linear;
-}
-
-.orange {
-    background: url("../img/orange.png") center no-repeat;
-    background-size: contain;
-    animation: rotate infinite .7s linear;
-}
-
-.banana {
-    background: url("../img/banana.png") center no-repeat;
-    background-size: contain;
-    animation: rotate infinite .8s linear;
-}
-
-@keyframes rotate {
-    to{
-        transform: rotate(360deg);
-    }
- }
-
-
-
